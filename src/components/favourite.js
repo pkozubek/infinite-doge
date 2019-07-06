@@ -1,14 +1,14 @@
 import React from "react";
-import GridList from "@material-ui/core/GridList";
-import SingleImage from "./singleImage";
+import SingleImage from "./spinner/singleImage/singleImage";
+import ImageContainer from "./imageContainer";
 
 const favourite = props => {
   return (
-    <GridList>
+    <ImageContainer>
       {props.images.map(singleImage => {
-        return <SingleImage src={singleImage} />;
+        return <SingleImage click={props.click} src={singleImage} />;
       })}
-    </GridList>
+    </ImageContainer>
   );
 };
 

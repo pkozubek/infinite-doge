@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ImagesContainer from "./components/ImagesContainer";
+import Images from "./components/Images";
 import "./App.css";
 import MenuTab from "./components/menuTab";
 import Favourite from "./components/favourite";
@@ -47,8 +47,15 @@ class App extends Component {
   };
 
   addToFavourite = image => {
+    if (!this.state.favourite.includes(image))
+      this.setState({
+        favourite: [...this.state.favourite, image]
+      });
+  };
+
+  removeFromFavourite = image => {
     this.setState({
-      favourite: [...this.state.favourite, image]
+      favourite: this.state.favourite.filter(favImg => favImg !== image)
     });
   };
 
@@ -58,14 +65,19 @@ class App extends Component {
     switch (this.state.currentMenu) {
       case "Images":
         mainDiv = (
-          <ImagesContainer
+          <Images
             imageArray={this.state.imageArray}
             click={image => this.addToFavourite(image)}
           />
         );
         break;
       case "Favourite":
-        mainDiv = <Favourite images={this.state.favourite} />;
+        mainDiv = (
+          <Favourite
+            images={this.state.favourite}
+            click={image => this.removeFromFavourite(image)}
+          />
+        );
         break;
       default:
         mainDiv = null;
@@ -89,7 +101,9 @@ class App extends Component {
               this.loadImages();
             }
           }}
-        />
+        >
+          <div style={{ display: "block", height: "100px" }} />
+        </Waypoint>
       </div>
     );
   }
