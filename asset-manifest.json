@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/infinite-doge/static/css/main.963de8a3.chunk.css",
+    "main.js": "/infinite-doge/static/js/main.874e3f11.chunk.js",
+    "main.js.map": "/infinite-doge/static/js/main.874e3f11.chunk.js.map",
+    "runtime~main.js": "/infinite-doge/static/js/runtime~main.b20b2beb.js",
+    "runtime~main.js.map": "/infinite-doge/static/js/runtime~main.b20b2beb.js.map",
+    "static/js/2.fdd83947.chunk.js": "/infinite-doge/static/js/2.fdd83947.chunk.js",
+    "static/js/2.fdd83947.chunk.js.map": "/infinite-doge/static/js/2.fdd83947.chunk.js.map",
+    "index.html": "/infinite-doge/index.html",
+    "precache-manifest.bcb9da0faf44b2475088d68476f099dc.js": "/infinite-doge/precache-manifest.bcb9da0faf44b2475088d68476f099dc.js",
+    "service-worker.js": "/infinite-doge/service-worker.js",
+    "static/css/main.963de8a3.chunk.css.map": "/infinite-doge/static/css/main.963de8a3.chunk.css.map"
+  }
+}
