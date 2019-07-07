@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Spinner from "../../spinner";
+import Spinner from "../spinner";
 import "./singleImage.css";
 import Delete from "@material-ui/icons/Delete";
 import Favorite from "@material-ui/icons/Favorite";
@@ -14,21 +14,20 @@ class singleImage extends Component {
       ? { display: "block" }
       : { display: "none" };
 
-    console.log(this.props.canBeLiked);
-
     return (
       <div className="singleImageContainer">
         <Spinner isVisble={!this.state.isLoaded} />
         <img
+          alt={this.props.src}
           src={this.props.src}
           style={{ ...imageStyle, width: "100%", height: "100%" }}
           onLoad={() => this.setState({ isLoaded: true })}
         />
-        <div
-          className="hovered"
-          onClick={() => this.props.click(this.props.src)}
-        >
-          <button className="likeButton">
+        <div className="hovered">
+          <button
+            className="likeButton"
+            onClick={() => this.props.click(this.props.src)}
+          >
             {this.props.canBeLiked ? (
               <Favorite fontSize="large" />
             ) : (

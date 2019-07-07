@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Images from "./components/Images";
+import Images from "../components/Images";
 import "./App.css";
-import MenuTab from "./components/menuTab";
-import Favourite from "./components/favourite";
+import MenuTab from "../components/menuTab";
+import Favourite from "../components/favourite";
 import axios from "axios";
 import { Waypoint } from "react-waypoint";
 
@@ -22,7 +22,6 @@ class App extends Component {
   }
 
   loadImages = () => {
-    console.log("test");
     let localArray = [];
     axios
       .get(CORS_ANYWHERE + API_URL)
@@ -102,7 +101,7 @@ class App extends Component {
             }
           }}
         >
-          <div style={{ display: "block", height: "100px" }} />
+          <div style={{ display: "block", height: "200px" }} />
         </Waypoint>
       </div>
     );

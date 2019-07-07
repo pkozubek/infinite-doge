@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SingleImage from "./spinner/singleImage/singleImage";
+import SingleImage from "./singleImage/singleImage";
 import ImageContainer from "./imageContainer";
 
 class Images extends Component {
